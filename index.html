@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Professional Portfolio</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+        <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    </head>
+    <body>
+        <header>
+            <div class="profile-pic">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQEoR9TXV-vTZA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720547049589?e=1735171200&v=beta&t=WqNNkb6iaQYIkrbcGJlZ4uTaAEWO5xX9zzJTsHTD8HA" alt="Profile Picture">
+            </div>
+            <h1>Matthew Cox</h1>
+            <p>He/Him</p>
+        </header>
+
+    <nav>
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="openTab('about')">About</button>
+            <button class="tab-button" onclick="openTab('projects')">Projects</button>
+            <button class="tab-button" onclick="openTab('skills')">Skills</button>
+            <button class="tab-button" onclick="openTab('contact')">Contact</button>
+        </div>
+    </nav>
+
+    <main>
+        <div id="about" class="tab-content active">
+            <h2>About Me</h2>
+            <p>Hi, I'm Matthew Cox, an undergraduate student at Georgia Institute of Technology in the Computational Media degree program. My passion lies in software development, 3D art, and game design.</p>
+        </div>
+
+        <div id="projects" class="tab-content">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Modeling for AltaRune</h3>
+                    <p>Modeled the 18-tile tileset for Fall 2024 VGDev game project AltaRune as well as a few towers.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Coding Aid Mobile App Mockup</h3>
+                    <p>Created a prototype build of a mobile app that utilizes OCR and Artificial Intelligence to allow debugging from the device's camera</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="skills" class="tab-content">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">Unity</span>
+                <span class="skill-tag">Blender</span>
+                <span class="skill-tag">Adobe Photoshop</span>
+                <span class="skill-tag">Adobe Illustrator</span>
+                <span class="skill-tag">Adobe Animate</span>
+            </div>
+        </div>
+
+        <div id="contact" class="tab-content">
+            <h2>Contact Me</h2>
+            <p>You can reach me at:</p>
+            <ul>
+                <li>Email: mcox31565@gmail.com</li>
+                <li>Phone: (912) 227-7181</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Falc0n78"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/matthew-e-cox/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/Falc0n_78"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(tabName) {
+            // Hide all tab content
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let content of tabContents) {
+                content.classList.remove('active');
+            }
+
+            // Remove active class from all buttons
+            const tabButtons = document.getElementsByClassName('tab-button');
+            for (let button of tabButtons) {
+                button.classList.remove('active');
+            }
+
+            // Show the selected tab content and activate the button
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
